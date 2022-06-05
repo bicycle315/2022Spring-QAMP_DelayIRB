@@ -7,6 +7,6 @@
  3. Evaluate how well the theory explain the real world by comparing infidelity of Delay IRB. Figure out if the affect of other factor is large(Theoretical CLE<<Delay IRB) or small(Theoretical CLE~Delay IRB)
  ------
  ### Issues
- 1. Expected CLE~Delay IRB<Gate(1q or 2q)error. However, both 1q and 2q showed **CLE<Gate error<Delay** on most backends.![image (1)](https://user-images.githubusercontent.com/56623045/172032331-eabb1dd3-64bc-46d3-a3ec-be42b1b6672c.png) ![image](https://user-images.githubusercontent.com/56623045/172032338-80accdb4-2e0b-4e4e-b84c-81b8af3a9439.png)
+ 1. Expected CLE~Delay IRB<Gate(1q or 2q)error. However, both 1q and 2q showed **CLE<Gate error<Delay** on most backends. Theses results are thought to be originated from error in idling time which contains lots of phase(Z) error. It can be suppressed by Dynamical Decoupling sequences.![image (1)](https://user-images.githubusercontent.com/56623045/172032331-eabb1dd3-64bc-46d3-a3ec-be42b1b6672c.png) ![image](https://user-images.githubusercontent.com/56623045/172032338-80accdb4-2e0b-4e4e-b84c-81b8af3a9439.png)
  2. The timing of error rate comparision between CLE and Delay IRB incurs different gate calibration and reference sequence -> make a new module `DoubleIRB` which provides common reference RB sequence among all experiments.
 
